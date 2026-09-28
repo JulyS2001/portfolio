@@ -939,8 +939,14 @@ footer p {
 ================================ */
 
 @media (max-width: 1100px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+
+    /* HABILIDADES */
+    .skills-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-category:last-child {
+        grid-column: 1 / -1;
     }
 }
 
@@ -948,7 +954,8 @@ footer p {
     .hero {
         padding: 70px 0;
     }
-     .navbar-container {
+
+    .navbar-container {
         height: 65px;
     }
 
@@ -963,13 +970,10 @@ footer p {
         top: 65px;
         left: 0;
         width: 100%;
-
         display: none;
         flex-direction: column;
         align-items: stretch;
-
         padding: 15px;
-
         background: var(--card);
         border-bottom: 1px solid var(--border);
     }
@@ -995,9 +999,22 @@ footer p {
         font-size: 30px;
     }
 
-    .skills-grid {
+    /* HABILIDADES */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .skill-category:last-child {
+        grid-column: auto;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .skill-items {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
     }
 
     .about-card {
@@ -1028,12 +1045,50 @@ footer p {
         height: 190px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    /* HABILIDADES */
+    .skills {
+        padding: 55px 16px;
     }
 
-    .skill-card {
+    .skill-category {
         padding: 18px;
+        border-radius: 14px;
+    }
+
+    .category-heading {
+        gap: 10px;
+        margin-bottom: 18px;
+        padding-bottom: 15px;
+    }
+
+    .category-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 19px;
+    }
+
+    .category-heading h3 {
+        font-size: 16px;
+    }
+
+    .category-heading span {
+        font-size: 10px;
+    }
+
+    .skill-items {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .skill-item {
+        min-height: 52px;
+        padding: 8px 10px;
+    }
+
+    .skill-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 20px;
     }
 
     .about-card {
